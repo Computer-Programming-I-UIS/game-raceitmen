@@ -4,10 +4,13 @@ AUTORES: ANDRES CADENA SEBASTIAN SANCHEZ */
 import ddf.minim.*;
 Minim minim;
 AudioPlayer Sinicio, Sfondo, Sefectos;
-PImage Menu, PrimerM, Volver, SonOn, SonOff;
+PImage Menu, PrimerM, Volver, SonOn, SonOff, charco, planta, personaje;;
 PFont fuente;
 int tipo, OP2;
 boolean button=false, button2=false, musica=true, efectos=true;
+Obstaculo ch;
+Obstaculo pl;
+Personaje per;
 
 void setup() {
   size (1000, 500);
@@ -21,6 +24,12 @@ void setup() {
   Volver = loadImage("Volveri.png");
   fuente=loadFont("BradleyHandITC-40.vlw");
   textFont(fuente);
+  charco = loadImage("Charco.png");
+  planta = loadImage("Planta.png");
+  personaje = loadImage("correr.png");
+  ch = new Obstaculo(charco,1000,35,130,60,400,150);
+  pl = new Obstaculo(planta,1600,35,150,150,305,150);
+  per = new Personaje(personaje,100,170,160,290);
   
 }
 void draw(){
@@ -52,6 +61,10 @@ void draw(){
     break;
   case 3:
   image(PrimerM,0,0);
+  ch.display();
+  pl.display();
+  per.movimiento();
+  
   break;
   case 4:
   OPCIONES2();
