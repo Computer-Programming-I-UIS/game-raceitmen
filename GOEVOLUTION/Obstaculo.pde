@@ -17,7 +17,7 @@ class Obstaculo {
     image(obstaculo, xpos, y, ancho, altura);  
    xpos -= xspeed;
    if(xpos+anchor < 0){
-     xpos = width+30;
+     xpos = random(width+100,width+800);
    }
   }
 }

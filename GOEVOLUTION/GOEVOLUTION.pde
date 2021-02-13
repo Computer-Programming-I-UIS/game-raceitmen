@@ -4,10 +4,13 @@ AUTORES: ANDRES CADENA SEBASTIAN SANCHEZ */
 Obstaculo ch;
 Obstaculo pl;
 Personaje per;
-PImage Menu, PrimerM, Volver, charco, planta, personaje;
+Fondo bos;
+PImage Menu, PrimerM, Volver, charco, planta, personaje,saltar,slt;
 int tipo;
 boolean button=false;
 boolean button2=false;
+int repeticion=0;
+boolean salto,saltar2=false;
 
 void setup() {
   size (1000, 500);
@@ -17,9 +20,11 @@ void setup() {
   charco = loadImage("Charco.png");
   planta = loadImage("Planta.png");
   personaje = loadImage("correr.png");
-  ch = new Obstaculo(charco,1000,35,130,60,400,150);
-  pl = new Obstaculo(planta,1600,35,150,150,305,150);
+  saltar=loadImage("saltar.png");
+  ch = new Obstaculo(charco,1000,25,130,60,400,150);
+  pl = new Obstaculo(planta,1800,25,120,120,305,150);
   per = new Personaje(personaje,100,170,160,290);
+  bos = new Fondo(PrimerM,-100);
   
 }
 void draw(){
@@ -36,11 +41,10 @@ void draw(){
     //Opciones();
     break;
   case 2:
-  image(PrimerM,0,0);
+  bos.display();
   ch.display();
   pl.display();
   per.movimiento();
-  
   break;
   }
 }
