@@ -4,16 +4,16 @@ AUTORES: ANDRES CADENA SEBASTIAN SANCHEZ */
 import ddf.minim.*;
 Minim minim;
 AudioPlayer Sinicio, Sfondo, Sefectos;
-PImage Menu, PrimerM, Volver, SonOn, SonOff, charco, planta, personaje,saltar,slt;
-PFont fuente;
-int tipo, OP2;
-boolean button=false, button2=false, musica=true, efectos=true;
 Obstaculo ch;
 Obstaculo pl;
 Personaje per;
 Fondo bos;
-int repeticion=0;
-boolean salto,saltar2=false;
+PImage Menu, PrimerM, Volver, SonOn, SonOff, charco, planta, personaje,saltar,muertepl,muertech,poderv;
+PFont fuente;
+int tipo, OP2;
+boolean button=false, button2=false, musica=true, efectos=true;
+int repeticion=0,repeticion2=0;
+boolean salto,salto2,saltar2=false,poder=false;
 
 void setup() {
   size (1000, 500);
@@ -31,10 +31,13 @@ void setup() {
   planta = loadImage("Planta.png");
   personaje = loadImage("correr.png");
   saltar=loadImage("saltar.png");
-  ch = new Obstaculo(charco,1000,25,130,60,400,150);
-  pl = new Obstaculo(planta,1800,25,120,120,320,150);
+  muertepl=loadImage("MuertePlanta.png");
+  muertech=loadImage("MuerteCh.png");
+  poderv=loadImage("poder.png");
+  ch = new Obstaculo(charco,muertech,1000,35,175,60,400,150);
+  pl = new Obstaculo(planta,muertepl,1800,35,120,120,320,150);
   per = new Personaje(personaje,100,170,160,290);
-  bos = new Fondo(PrimerM,-100);
+  bos = new Fondo(PrimerM,-100,30);
   
 }
 void draw(){
@@ -70,6 +73,8 @@ void draw(){
   ch.display();
   pl.display();
   per.movimiento();
+  pl.muerte();
+  ch.muerte();
   break;
   case 4:
   OPCIONES2();
