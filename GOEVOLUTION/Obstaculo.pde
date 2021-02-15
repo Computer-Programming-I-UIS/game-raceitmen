@@ -1,8 +1,8 @@
 class Obstaculo {
-  int  y,an;
+  int  y,an,al=148;
   float xpos;
   int ancho, altura, anchor;
-  float xspeed;
+  float contador=0,xspeed,contadorp=0,puntuacionp;
   PImage obstaculo,fmuerte;
   int y2=290,salto2=10,x2=110;
   Obstaculo(PImage tobstaculo,PImage tfmuerte,float tempxpos, float tempxspeed,int tempancho,int tempaltura,int tempy,int tempar) {
@@ -22,36 +22,26 @@ class Obstaculo {
      xpos = random(width+100,width+800);
    }
   }
-  void muerte(){
-   boolean saltar2 = keyPressed == true &&  key==CODED && keyCode == UP && y2==290;
-    if (saltar2){      
-      repeticion2=1;
-      salto2=48;
-      } 
-      boolean bajar = keyPressed == true &&  key==CODED && keyCode == DOWN;
-    if (bajar){
-      y2=290;
-    }
-    if (repeticion2==1 && y2<=290) { 
-      an=110;
-      y2-=salto2;
-      salto2-=7;
-          delay(20);
-    }else {
-      an=92;
-      if (y2-salto2<290) {
-        salto2=0;
-      }
-        if (y2>290) {
-        salto2=0;
-        y2=290;
-        repeticion2=0;
-      }
-    }
-    if((xpos>=x2)&&(xpos<=x2+an)&&(y<=y2+148)){
+  void muerte(int a){
+
+    if((xpos+an>=per.xp+10)&&(xpos-an+100<=per.xp+10+an)&&(y+a<=per.yp+al)){
      image(fmuerte,300,0,400,400);
-    }else if((xpos+ancho>=x2)&&(xpos+ancho<=x2+an)&&(y<=y2+148)){
-     image(fmuerte,300,0,400,400);
+     contador +=1;
+    }else if((xpos+ancho>=per.xp+10)&&(xpos+ancho<=per.xp+10+an)&&(y+a<=per.yp+al)){
+      image(fmuerte,300,0,400,400);
+      contador +=1;
+    }else if((xpos+ancho>=per.xp+10)&&(xpos+ancho<=per.xp+10+an)&&(y+a>=per.yp+148)){
+      contadorp+=1;
+    }else if((xpos+an>=per.xp+10)&&(xpos-an+100<=per.xp+10+an)&&(y+a>=per.yp+148)){
+      contadorp+=1; 
     }
   }
+  void puntuacion(){
+    puntuacionp=ch.contadorp/9+(pl.contadorp/7);
+    fill(255);
+    text(puntuacionp,800,75);
+    //if(puntuacionp%10);
+  }
+  
+
 }

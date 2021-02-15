@@ -2,7 +2,7 @@ class Fondo {
   float yf;
   int xi=0;
   int x2=width+25;
-  int v;
+  float v;
 
   //constructor
   Fondo(PImage tempm, float tempyf,int tempv) {
