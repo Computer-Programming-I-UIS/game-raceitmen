@@ -10,7 +10,11 @@ Personaje per;
 Fondo bos;
 Obstaculo ban;
 Obstaculo cor;
+<<<<<<< HEAD
 PImage Menu, PrimerM, Volver, SonOn, SonOff, charco, planta, personaje,saltar,muertepl,muertech,jugador,poderv;
+=======
+PImage Menu, PrimerM, Volver, SonOn, SonOff, charco, planta, personaje,saltar,muertepl,muertech,jugador,poderv,fondo2;
+>>>>>>> 1e2ad907be4748b7af6b3109993a709ea5e13f73
 PImage banana,corazon;
 PFont fuente;
 int tipo, OP2;
@@ -26,6 +30,7 @@ void setup() {
   Sinicio.setGain(-20);
   Sfondo.setGain(-20);
   Menu = loadImage("fondo.png");
+  fondo2 = loadImage("fondo2.png");
   PrimerM = loadImage("PrimerMapa.png");
   Volver = loadImage("Volveri.png");
   fuente=loadFont("BradleyHandITC-40.vlw");
@@ -53,9 +58,9 @@ void draw(){
   switch (tipo) { 
   case 0:       
     image(Menu, 0, 0);
-    fill(0,100);
+    fill(0);
     textSize(80);
-    text("TITULO", 700, 120);
+    text("GOEVOLUTION", 400, 120);
     botones();
     if (musica==true) {
       Sinicio.play();
@@ -95,5 +100,8 @@ void draw(){
   fill(100,200,100);
   rect(0,0,width,height);
   break;
+  case 6:
+    perder();
+    break;
   }
 }

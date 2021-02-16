@@ -14,6 +14,7 @@ class Personaje {
     personajem=tempers;
   }
   void movimiento(){
+    
       boolean saltar2 = keyPressed == true &&  key==CODED && keyCode == UP && yp==290;
       boolean poder = keyPressed == true &&  key==CODED && keyCode == RIGHT ;
     if (saltar2){      
@@ -88,7 +89,7 @@ class Personaje {
     image(jugador,25,25,75,75);
     println(ch.puntuacionp);
     if(vida<=40){
-     tipo=5;
+     tipo=6;
     }
   }
 }

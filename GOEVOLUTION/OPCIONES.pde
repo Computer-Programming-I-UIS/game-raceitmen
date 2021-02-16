@@ -5,7 +5,7 @@
     PANTALLA();
     break;
   case 1:
-    //CONTROLES();
+    CONTROLES();
     break;
   case 2:
     //CREDITOS();
@@ -47,4 +47,26 @@
   OP2 = 2;
   }
   }
+  void CONTROLES () { //ejecuta la ayuda, una breve explicaión interactiva de los controles del juego
+  fill(0);
+  textSize(50);
+  text("Ayuda", 400, 70);
+  fill(0);
+  textSize(30);
+  //Mensajes de los controles del juego
+  text("Oprime el botón de flecha ", 30, 150);
+  text("hacia arriba para saltar", 30, 190);
+  text("Mientras estas en el aire ", 600, 150);
+  text("tambien puedes bajar oprimiendo ", 600, 190);
+  text("el bóton de flecha hacia abajo", 600, 230);
+  fill(0, 160);
+  rect(10, 430, 100, 50, 5);
+  fill(255);
+  textSize(30);
+  text("Atrás", 25, 465);
+  if ((mouseX>10) && (mouseX<10+100) && (mouseY>430) && (mouseY<430+50) && (mousePressed==true)) {
+    OP2 = 0;
+    delay(150);
+  }
+}
   
