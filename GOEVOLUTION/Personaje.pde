@@ -87,9 +87,5 @@ class Personaje {
     fill(0,0,255);
     rect(50,66,carga,19);
     image(jugador,25,25,75,75);
-    println(ch.puntuacionp);
-    if(vida<=40){
-     tipo=6;
-    }
   }
 }
