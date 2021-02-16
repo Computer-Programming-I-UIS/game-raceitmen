@@ -2,7 +2,7 @@ class Obstaculo {
   int  y,an,al=148;
   float xpos;
   int ancho, altura, anchor;
-  float contador=0,xspeed,contadorp=0,puntuacionp;
+  float contador=0,xspeed,contadorp=0,puntuacionp,puntaje_max;
   PImage obstaculo,fmuerte;
   int y2=290,salto2=10,x2=110;
   Obstaculo(PImage tobstaculo,float tempxpos, float tempxspeed,int tempancho,int tempaltura,int tempy,int tempar) {
@@ -65,6 +65,4 @@ class Obstaculo {
     fill(255);
     text(puntuacionp,800,75);
   }
-  
-
 }
