@@ -2,10 +2,11 @@ class Obstaculo {
   int  y,an,al=148;
   float xpos;
   int ancho, altura, anchor;
-  float contador=0,xspeed,contadorp=0,puntuacionp,puntaje_max;
-  PImage obstaculo,fmuerte;
+  float contador=0,xspeed,contadorp=0,puntuacionp;
+  PImage obstaculo,fmuerte,f;
   int y2=290,salto2=10,x2=110;
-  Obstaculo(PImage tobstaculo,float tempxpos, float tempxspeed,int tempancho,int tempaltura,int tempy,int tempar) {
+  Obstaculo(PImage tobstaculo,float tempxpos,PImage fondof, float tempxspeed,int tempancho,int tempaltura,int tempy,int tempar) {
+    f = fondof;
     xpos=tempxpos;
     xspeed=tempxspeed;
     obstaculo=tobstaculo;
@@ -51,9 +52,17 @@ class Obstaculo {
     if((xpos+an>=per.xp+10)&&(xpos-an+100<=per.xp+10+an)&&(y+a<=per.yp+al)){
      image(fmuerte,300,0,400,400);
      contador +=1;
+     if(per.vida<=40){
+       tfondof=f;
+     tipo=5;
+    }
     }else if((xpos+ancho>=per.xp+10)&&(xpos+ancho<=per.xp+10+an)&&(y+a<=per.yp+al)){
       image(fmuerte,300,0,400,400);
       contador +=1;
+      if(per.vida<=40){
+       tfondof=f;
+     tipo=5;
+    }
     }else if((xpos+ancho>=per.xp+10)&&(xpos+ancho<=per.xp+10+an)&&(y+a>=per.yp+148)){
       contadorp+=1;
     }else if((xpos+an>=per.xp+10)&&(xpos-an+100<=per.xp+10+an)&&(y+a>=per.yp+148)){
