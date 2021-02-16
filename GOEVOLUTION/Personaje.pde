@@ -73,7 +73,7 @@ class Personaje {
   }
   void cargas(){
     vida=200-12*(ch.contador+pl.contador);
-    
+    println(ch.contador+pl.contador);
     fill(0,150);
     rect(46,36,208,25);
     rect(46,63,208,25);
