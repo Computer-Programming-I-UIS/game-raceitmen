@@ -81,7 +81,7 @@ void CREDITOS() {
   text("Créditos", 400, 70);
   fill(#1F2BFF);
   textSize(30);
-  text("CREADORES: ANDRES FERNANDO CADENA O", 100, 150);
+  text("CREADORES: ANDRES FERNANDO CADENA Y", 100, 150);
   text("           SEBASTIAN SANCHEZ FORERO", 140, 200);
   fill(0);
   textSize(25);

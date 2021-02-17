@@ -55,9 +55,10 @@ void draw(){
   switch (tipo) { 
   case 0:       
     image(Menu, 0, 0);
-    fill(0,100);
+    fill(0);
     textSize(80);
-    text("Titulo", 700, 120);
+    text("GOEVOLUTION", 300, 120);
+    fill(0,100);
     botones();
     if (musica==true) {
       Sinicio.play();
