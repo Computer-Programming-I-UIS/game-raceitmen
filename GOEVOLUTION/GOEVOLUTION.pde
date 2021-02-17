@@ -11,7 +11,7 @@ Fondo bos;
 Obstaculo ban;
 Obstaculo cor;
 PImage Menu, PrimerM, Volver, SonOn, SonOff, charco, planta, personaje,saltar,muertepl,muertech,jugador,poderv;
-PImage banana,corazon,fondopl,fondoch,tfondof;
+PImage banana,corazon,fondopl,fondoch,tfondof,cla;
 PFont fuente;
 int tipo, OP2;
 boolean button=false, button2=false, musica=true, efectos=true;
@@ -42,6 +42,7 @@ void setup() {
   corazon=loadImage("corazon.png");
   fondoch=loadImage("fondoch.png");
   fondopl=loadImage("fondopl.png");
+  cla=loadImage("clasificacion.png");
   ch = new Obstaculo(charco,1000,fondoch,35,175,60,400,150);
   pl = new Obstaculo(planta,1800,fondopl,35,120,120,320,150);
   ban = new Obstaculo(banana,30000,fondoch,70,90,100,125,150);
@@ -55,6 +56,7 @@ void draw(){
   switch (tipo) { 
   case 0:       
     image(Menu, 0, 0);
+    image(cla, 10, 400);
     fill(0);
     textSize(80);
     text("GOEVOLUTION", 300, 120);
