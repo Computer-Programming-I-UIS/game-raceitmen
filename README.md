@@ -28,11 +28,14 @@ GOEVOLUTION
 -Tecla flecha derecha para activar poder.
 ### Características
  
+- Usar libreria minim para la musica.
 - Juego tipo sin fin. 
 - A medida que se avanza el juego aumenta su dificultad.
 - Contiene poderes Corazon y Banana.
 - Distintos tipos de muerte.
 
+## **Creditos**
+> Juego basado en el dinosaurio sin internet de google modificando y añadiendo cosas a nuestro gusto dando un toque especial que hace la diferencia con la clasica musica de crash un videojuego de la infacia de todo joven.
 
 ## **Capturas**
 ![Muerte1](https://imgur.com/OE0EvBu.png)

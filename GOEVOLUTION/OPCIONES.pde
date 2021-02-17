@@ -98,7 +98,7 @@ void CREDITOS() {
   textSize(25);
   text("Juego basado en el dinosaurio sin internet de google modificando y añadiendo", 50, 300);
   text("cosas a nuestro gusto dando un toque especial que hace la diferencia con la", 50, 330);
-  text("clasica musica de crash un videojuego de la infacia de todo joven ", 50, 360);   // link de la musica https://www.youtube.com/watch?v=DdVI-YAXYFw&list=PL95A6A5BF6E8BA993&index=2
+  text("clasica musica de crash un videojuego de la infacia de todo joven.- libreria minim", 50, 360);   // link de la musica https://www.youtube.com/watch?v=DdVI-YAXYFw&list=PL95A6A5BF6E8BA993&index=2
   fill(0, 160);
   rect(10, 430, 100, 50, 5);
   fill(255);
