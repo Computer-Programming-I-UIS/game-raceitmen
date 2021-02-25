@@ -3,7 +3,7 @@ puntos, saltando obstáculos que van saliendo a medida de que avanza el juego
 AUTORES: ANDRES CADENA SEBASTIAN SANCHEZ */
 import ddf.minim.*;
 Minim minim;
-AudioPlayer Sinicio, Sfondo, Sefectos;
+AudioPlayer Sinicio, Sfondo, Sefectos, audperder;
 Obstaculo ch;
 Obstaculo pl;
 Personaje per;
@@ -23,8 +23,10 @@ void setup() {
    minim = new Minim(this);
   Sinicio = minim.loadFile("Sinicio.wav"); 
   Sfondo = minim.loadFile("Sfondo.wav"); 
+  audperder= minim.loadFile("audperder.wav");
   Sinicio.setGain(-20);
   Sfondo.setGain(-20);
+  audperder.setGain(-15);
   Menu = loadImage("fondo.png");
   PrimerM = loadImage("PrimerMapa.png");
   Volver = loadImage("Volveri.png");
@@ -92,12 +94,15 @@ void draw(){
   ch.muerte(15,muertech);
   per.cargas();
   ch.puntuacion();
+  Sinicio.play();
   break;
   case 4:
   OPCIONES2();
   break;
   case 5:
   perder();
-  break;
+  Sinicio.pause();
+  audperder.play();
+    break;
   }
 }
