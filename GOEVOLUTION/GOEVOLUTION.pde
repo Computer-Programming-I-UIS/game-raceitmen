@@ -3,7 +3,7 @@ puntos, saltando obstáculos que van saliendo a medida de que avanza el juego
 AUTORES: ANDRES CADENA SEBASTIAN SANCHEZ */
 import ddf.minim.*;
 Minim minim;
-AudioPlayer Sinicio, Sfondo, Sefectos, audperder;
+AudioPlayer Sinicio, Sfondo, Sefectos, Sperder;
 Obstaculo ch;
 Obstaculo pl;
 Personaje per;
@@ -23,10 +23,10 @@ void setup() {
    minim = new Minim(this);
   Sinicio = minim.loadFile("Sinicio.wav"); 
   Sfondo = minim.loadFile("Sfondo.wav"); 
-  audperder= minim.loadFile("audperder.wav");
+  Sperder = minim.loadFile("audperder.wav");
   Sinicio.setGain(-20);
   Sfondo.setGain(-20);
-  audperder.setGain(-15);
+  Sperder.setGain(-15);
   Menu = loadImage("fondo.png");
   PrimerM = loadImage("PrimerMapa.png");
   Volver = loadImage("Volveri.png");
@@ -56,7 +56,8 @@ void setup() {
 void draw(){
   background(#319003);
   switch (tipo) { 
-  case 0:       
+  case 0:
+    Sperder.pause();
     image(Menu, 0, 0);
     image(cla, 10, 400);
     fill(0);
@@ -64,11 +65,10 @@ void draw(){
     text("GOEVOLUTION", 300, 120);
     fill(0,100);
     botones();
-    if (musica==true) {
-      Sinicio.play();
-    } else {
-      Sinicio.pause();
-    }
+      if (!Sinicio.isPlaying()) { 
+    Sinicio.rewind();
+    Sinicio.play();
+      }
     break;
   case 1:
     OPCIONES();
@@ -84,6 +84,7 @@ void draw(){
     }
     break;
   case 3:
+  Sperder.pause();
   bos.display();
   ch.display();
   pl.display();
@@ -94,7 +95,10 @@ void draw(){
   ch.muerte(15,muertech);
   per.cargas();
   ch.puntuacion();
-  Sinicio.play();
+  if (!Sinicio.isPlaying()) { 
+    Sinicio.rewind();
+    Sinicio.play();
+  }
   break;
   case 4:
   OPCIONES2();
@@ -102,7 +106,10 @@ void draw(){
   case 5:
   perder();
   Sinicio.pause();
-  audperder.play();
-    break;
+  if (!Sperder.isPlaying()) { 
+    Sperder.rewind();
+    Sperder.play();
+   }
+   break;
   }
 }
