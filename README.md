@@ -16,6 +16,7 @@ GOEVOLUTION
 
 -Teclas flechas arriba y abajo para realizar movimiento.
 -Tecla flecha derecha para activar poder.
+![Flechasalatar](https://imgur.com/fxDBXZO)
 ### Características
  
 - Usar libreria minim para la musica.
@@ -27,11 +28,12 @@ GOEVOLUTION
 ## **Creditos**
 > Juego basado en el dinosaurio sin internet de google modificando y añadiendo cosas a nuestro gusto dando un toque especial que hace la diferencia con la clasica musica de crash un videojuego de la infacia de todo joven.
 
-## **Tipos de muertes**
+## **Tipos de muerte**
 ![Muerte1](https://imgur.com/OE0EvBu.png)
 ![Muerte2](https://imgur.com/j7XBptg.png)
 
 ## **Objetos de carga**
+> Estos objetos apareceran de forma aleatoria en el juego, sirven para cargar el poder o recuperar vida del jugador. 
 ![banana](https://imgur.com/f023b96.png)
 ![corazon](https://imgur.com/i5vEsLi.png)
 
