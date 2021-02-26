@@ -1,6 +1,5 @@
 GOEVOLUTION
 ================
-❤️🍌💧🏵️
 ![Menú Principal](https://imgur.com/qT7XDRu.png)
 
 ### **HISTORIA**
@@ -28,9 +27,11 @@ GOEVOLUTION
 ## **Creditos**
 > Juego basado en el dinosaurio sin internet de google modificando y añadiendo cosas a nuestro gusto dando un toque especial que hace la diferencia con la clasica musica de crash un videojuego de la infacia de todo joven.
 
-## **Capturas**
+## **Tipos de muertes**
 ![Muerte1](https://imgur.com/OE0EvBu.png)
 ![Muerte2](https://imgur.com/j7XBptg.png)
+
+## **Objetos de carga**
 ![banana](https://imgur.com/f023b96.png)
 ![corazon](https://imgur.com/i5vEsLi.png)
 
