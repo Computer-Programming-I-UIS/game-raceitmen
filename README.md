@@ -12,16 +12,7 @@ GOEVOLUTION
 ***Andres Fernando Cadena Ordoñez*** - ***2191447***.
 
 ***Sebastian Sanchez Forero*** - ***2190225***.
-
-## **Objetivos**
-- [x] Menu.
-- [x] Créditos.
-- [x] Clasificación por edad y tipo.                                  
-- [x] Presentación del juego mediante un tutorial o historia corto.   
-- [x] Sonidos.
-- [x] Diseño y calidad de personajes.
-- [x] Diseño y calidad del entorno.       
-- [x] Originalidad.                       
+                      
 ## **CONTROLES**
 
 -Teclas flechas arriba y abajo para realizar movimiento.
