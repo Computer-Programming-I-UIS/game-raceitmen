@@ -15,7 +15,8 @@ GOEVOLUTION
 ## **CONTROLES**
 
 - Para saltar oprima ![flechasaltar](https://imgur.com/kVgbJ3x.png)
-- Cuando se encuentre en el aire y quiera bajar oprima ![flechabajar](https://imgur.com/KBtiMbA.png)
+- Cuando se encuentre en el aire y quiera bajar más rapido de lo normal oprima ![flechabajar](https://imgur.com/KBtiMbA.png)
+
 - Para activar el poder tienes que estar en aire y luego oprimir ![flechapoder](https://imgur.com/29kT0VK.png)
 
 
