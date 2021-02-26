@@ -16,7 +16,8 @@ GOEVOLUTION
 
 -Teclas flechas arriba y abajo para realizar movimiento.
 -Tecla flecha derecha para activar poder.
-https://imgur.com/fxDBXZO
+![flechasaltar](https://imgur.com/fxDBXZO.png)
+
 ### Características
  
 - Usar libreria minim para la musica.
