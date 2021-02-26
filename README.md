@@ -24,7 +24,6 @@ Todo comenzó cuando se creo la primer maquina del tiempo la cual cayó en manos
 ### Características
  
 - Usar libreria minim para la musica.
-- Juego tipo sin fin. 
 - A medida que se avanza el juego aumenta su dificultad.
 - Contiene poderes Corazon y Banana.
 - Distintos tipos de muerte.
