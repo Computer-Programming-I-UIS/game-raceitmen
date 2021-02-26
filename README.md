@@ -12,7 +12,7 @@ GOEVOLUTION
 
 ***Sebastian Sanchez Forero*** - ***2190225***.
                       
-## **CONTROLES**
+### CONTROLES
 
 -Para saltar oprima ![flechasaltar](https://imgur.com/kVgbJ3x.png).
 -Cuando se encuentre en el aire y quiera bajar oprima ![flechabajar](https://imgur.com/KBtiMbA.png).
