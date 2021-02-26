@@ -37,7 +37,7 @@ Juego basado en el dinosaurio sin internet de google modificando y añadiendo co
 ![Muerte2](https://imgur.com/j7XBptg.png)
 
 ## **Objetos de carga**
-Estos objetos apareceran de forma aleatoria en el juego, sirven para cargar el poder o recuperar vida del jugador. 
+Estos objetos apareceran de forma aleatoria en el juego, la banana sirve para cargar el poder y el corazón para recuperar vida del jugador. 
 
 ![banana](https://imgur.com/f023b96.png)
 ![corazon](https://imgur.com/i5vEsLi.png)
